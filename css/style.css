@@ -1,6 +1,8 @@
 
 @charset "utf-8";
 
+/* Reset css */
+
 html{
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -10,6 +12,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 img {
@@ -23,3 +27,334 @@ li {
 a {
     text-decoration: none;
 }
+
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section p {
+    text-align: center;
+}
+
+section hr {
+    width: 150px;
+    margin: 0 auto 60px;
+    border: 0;
+    background-color: #FFC400;
+    height: 2px;
+}
+
+.container {
+    width: 1200px;  
+    max-width: 100%;    /* Largeur max de 100% du device */ 
+    margin: 0 auto;     /* Marge de 0 en haut et en bas ET
+    surtout auto sur les côtés (ca permet de centrer la boite)*/
+}
+
+
+/* Style du menu */
+
+.mainHeader {
+    position: absolute;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.menu nav ul {
+    text-align: center;
+}
+
+.menu nav ul li {
+    display: inline; 
+}
+
+.menu nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+/* Style banner */
+.banner {
+    background-image: url("../img/head_bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner p {
+    color: #FFC400;
+}
+
+/* Style Services */
+
+h2,h3{
+    text-transform: uppercase;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pic {
+    width: 36%;
+}
+
+.desc {
+    width: 60%;
+
+}
+
+.desc p {
+    text-align: left;
+}
+
+.desc a {
+    color: white;
+    background-color: #FFC400;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+}
+
+.process {
+    height: 350px;
+    background-image: linear-gradient(rgba(4, 0, 33, 0.8), rgba(4, 0, 33, 0.9)),   
+    url('../img/process-bg.jpg');
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process h3{
+    color: white;
+    font-size: 2rem;   
+}
+.books {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+}
+
+.pic_book img {
+    border-radius: 1rem;
+}
+
+.book p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 25%;
+    height: 3rem;
+    font-size: 1rem;
+    border-color: rgba(4, 0, 33, 0.1) ;
+}
+
+button {
+    width: 20%;
+    background-color: #FFC400;
+    font-weight: 900;
+    color: white;
+    border:none
+}
+
+/* Style Footer */
+
+footer {
+    background-color: rgb(4,0,33);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer img {
+    width: 2rem;
+    padding: 0 1rem;
+}
+
+footer p {
+    color: white;
+}
+
+
+@media screen and (max-width:480px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu nav ul {
+        text-align: center;
+        padding-left: 0;
+    }
+    .menu nav ul li {
+        display: block;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section hr {
+        width: 150px;
+        margin: 0 auto 30px;
+        border: 0;
+        background-color: #FFC400;
+        height: 2px;
+    }
+    
+
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .pic {
+        width: 90%;
+        padding-left: 1rem;
+    }
+    
+    .desc {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;  
+    }   
+    .desc h3 {
+        text-align: center;
+    }
+
+    .desc p {
+        text-align: center;
+    }
+
+    .services {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .service {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content : center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .service .pic {
+        width: 50%;
+    }
+
+    .process h3{
+        color: white;
+        font-size: 1.3rem;
+        padding: 0 1rem;   
+    }
+    .books {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .book {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content : center;
+        align-items: center;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input {
+        width: 90%;
+        height: 3rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+
+    }
+    
+    button {
+        width: 80%;
+        background-color: #FFC400;
+        font-weight: 900;
+        color: white;
+        border:none;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+
+    
+
+
+    
+}
+
